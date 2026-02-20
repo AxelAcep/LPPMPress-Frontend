@@ -184,11 +184,13 @@
 }
 
 /* ================= RESPONSIVE TABLET & MOBILE ================= */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
 
     .section {
         flex-direction: column;
         height: auto;
+        background-color: #f5f7f6;
+        min-height: 100vh;
     }
 
     .LeftContainer,
@@ -198,67 +200,81 @@
     }
 
     .LeftContainer {
-        padding: 40px 0;
+        padding: 0;
         text-align: center;
     }
 
     .RightContainer {
-        padding: 20px 0 40px 0;
+        padding: 0;
         align-items: center;
+        justify-content: start;
+        flex: 1;
     }
 
-    /* ====== TEXT SIZE DIPERKECIL ====== */
-
     .Title {
-        font-size: 2.2rem;
-        margin: 0 8% 4%;
+        font-size: 8vw;
+        margin: 5% 4% 1% 4%;
     }
 
     .Subtitle {
-        font-size: 0.9rem;
-        margin: 0 8% 8%;
+        font-size: 2vw;
+        margin: 1% 2% 5% 2%;
+    }
+
+    .BackButton{
+        display: none;
     }
 
     .LoginText {
-        font-size: 1.8rem;
-        margin-left: 0;
+        font-size: 8vw;
+        margin-top: 5%;
         text-align: center;
     }
 
     .LoginDesc {
-        font-size: 0.9rem;
-        margin-left: 0;
+        font-size: 3vw;
         text-align: center;
-    }
-
-    .BackButton {
-        font-size: 0.9rem;
-        margin: 8% 0 5% 0;
-        align-self: flex-start;
     }
 
     .FormContainer {
         width: 95%;
         margin: 0;
+        gap: 5vw;
     }
 
     .Input {
-        font-size: 0.85rem;
-        padding: 10px 14px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 3vw 4vw;
+        border: 1.5px solid #d1d5db;
+        border-radius: 2vw;
+        font-size: 3.5vw;
+        outline: none;
     }
 
     .SubmitButton {
-        font-size: 0.9rem;
+        margin-top: auto;
+        font-size: 3.5vw;
         padding: 10px;
     }
 
+    .label {
+        font-size: 3.5vw;
+    }
+
     .Row {
-        font-size: 0.8rem;
+        font-size: 3vw;
+    }
+
+    .DividerText {
+        margin: 0 1vw;
+        font-size: 2.5vw;
     }
 
     .BottomLogin {
-        font-size: 0.85rem;
         margin-right: 0;
+        margin-top: 5%;
+        margin-bottom: 5%;
         text-align: center;
     }
 }
