@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import LoginClient from "./LoginClient"; // Pindahkan logic ke sini
+import RegisterClient from "./RegisterClient"; // Pindahkan logic ke sini
 
 export const metadata: Metadata = {
   title: "Home | Nama Website Anda",
@@ -11,5 +11,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <LoginClient />;
+  return <RegisterClient />;
 }

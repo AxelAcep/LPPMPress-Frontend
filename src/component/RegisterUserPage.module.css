@@ -1,0 +1,280 @@
+/* ================= GLOBAL FLEX LAYOUT ================= */
+.section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+}
+
+/* ================= LEFT SIDE ================= */
+.LeftContainer {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: 
+        linear-gradient(rgba(6, 70, 53, 0.8), rgba(10, 92, 71, 0.8)),
+        url('/images/Register-Building.jpg') center/cover no-repeat;
+}
+
+/* ================= RIGHT SIDE ================= */
+.RightContainer {
+    width: 60%;
+    height: 100%;
+    background-color: #f5f7f6;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* ================= TYPOGRAPHY BASE ================= */
+.Title,
+.Subtitle,
+.BackButton,
+.LoginText,
+.LoginDesc,
+.FormContainer,
+.BottomLogin {
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+/* ================= LEFT TEXT ================= */
+.Title {
+    font-size: 4vw;
+    font-weight: bold;
+    color: white;
+    margin: 0 5% 2%;
+}
+
+.Subtitle {
+    font-size: 1vw;
+    font-weight: lighter;
+    color: white;
+    margin: 0 5% 10%;
+}
+
+/* ================= RIGHT TEXT ================= */
+.BackButton {
+    font-size: 1vw;
+    font-weight: 300;
+    color: #064635;
+    margin: 2% 0% 3% 3%;
+    text-decoration: none; 
+}
+
+.LoginText {
+    font-size: 2vw;
+    font-weight: bold;
+    color: #111827;
+    margin: 0 0 0 3%;
+}
+
+.LoginDesc {
+    font-size: 1vw;
+    font-weight: lighter;
+    color: #9ca3af;
+    margin: 0 0 3% 3%;
+}
+
+.label {
+    font-size: 0.875vw;
+    font-weight: 600;
+}
+
+/* ================= FORM ================= */
+.FormContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw;
+    width: 90%;
+    margin: 0 3%;
+}
+
+.InputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2vw;
+}
+
+.Checkbox{
+    width: 0.875vw;
+    height: 0.875vw;
+    border-radius: 0.1vw;
+}
+
+.InputWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.Input {
+    width: 100%;
+    padding: 0.6vw 0.8vw;
+    border: 1px solid #d1d5db;
+    border-radius: 0.1vw;
+    font-size: 1vw;
+    outline: none;
+}
+
+.Input:focus {
+    border-color: #10b981;
+}
+
+/* ================= BUTTON ================= */
+.SubmitButton {
+    background-color: #10b981;
+    color: white;
+    padding: 0.5vw;
+    border-radius: 8px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-bottom: 3%;
+    font-size: 1vw;
+}
+
+.SubmitButton:hover {
+    background-color: #059669;
+}
+
+/* ================= ROW & BOTTOM ================= */
+.Row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875vw;
+}
+
+.BottomLogin {
+    color: #9ca3af;
+    margin-top: 1%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+}
+
+/* ================= DIVIDER ================= */
+.DividerContainer {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #9ca3af;
+    font-size: 0.875rem;
+}
+
+.DividerContainer::before,
+.DividerContainer::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.DividerText {
+    margin: 0 0.5vw;
+    font-size: 0.8vw;
+}
+
+/* ================= RESPONSIVE TABLET & MOBILE ================= */
+@media (max-width: 800px) {
+
+    .section {
+        flex-direction: column;
+        height: auto;
+        background-color: #f5f7f6;
+        min-height: 100vh;
+    }
+
+    .LeftContainer,
+    .RightContainer {
+        width: 100%;
+        height: auto;
+    }
+
+    .LeftContainer {
+        padding: 0;
+        text-align: center;
+    }
+
+    .RightContainer {
+        padding: 0;
+        align-items: center;
+        justify-content: start;
+        flex: 1;
+    }
+
+    .Title {
+        font-size: 8vw;
+        margin: 5% 4% 1% 4%;
+    }
+
+    .Subtitle {
+        font-size: 2vw;
+        margin: 1% 2% 5% 2%;
+    }
+
+    .BackButton{
+        display: none;
+    }
+
+    .LoginText {
+        font-size: 8vw;
+        margin-top: 5%;
+        text-align: center;
+    }
+
+    .LoginDesc {
+        font-size: 3vw;
+        text-align: center;
+    }
+
+    .FormContainer {
+        width: 95%;
+        margin: 0;
+        gap: 5vw;
+    }
+
+    .Input {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 3vw 4vw;
+        border: 1.5px solid #d1d5db;
+        border-radius: 2vw;
+        font-size: 3.5vw;
+        outline: none;
+    }
+
+    .SubmitButton {
+        margin-top: auto;
+        font-size: 3.5vw;
+        padding: 10px;
+    }
+
+    .label {
+        font-size: 3.5vw;
+    }
+
+    .Row {
+        font-size: 3vw;
+    }
+
+    .DividerText {
+        margin: 0 1vw;
+        font-size: 2.5vw;
+    }
+
+    .BottomLogin {
+        margin-right: 0;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        text-align: center;
+    }
+}
